@@ -9,6 +9,10 @@
         font-family: $headerFont;
         font-size: toRem(25);
         color: black;
+        
+        &.accentedHeaderText {
+            color: $secondaryColor;
+        }
     }
 
     &Image {
@@ -27,6 +31,11 @@
         width: 70%;
         text-align: center;
         max-width: toRem(263);
+
+        &.accentedHeaderParagraph {
+            color: $secondaryColor;
+            font-weight: 500;
+        }
     }
 }
 
