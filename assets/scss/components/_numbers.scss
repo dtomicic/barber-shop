@@ -1,0 +1,76 @@
+.numbers {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/bg/numbersBG.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: 20%;
+    margin-bottom: toRem(30);
+    height: toRem(110);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: toRem(53);
+
+        &Item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &Header {
+                font-family: $headerFont;
+                font-size: toRem(30);
+                font-weight: 500;
+                color: $accentColor;
+            }
+
+            &SubHeader {
+                font-family: $textFont;
+                font-size: toRem(11);
+                font-weight: 700;
+                color: $secondaryColor;
+            }
+        }
+    }
+}
+
+// Media queries 
+@media (min-width: $breakTablet) {
+    .numbers {
+        margin-top: toRem(50);
+        height: toRem(130);
+        
+        &__content {
+            gap: toRem(100);
+        }
+
+        &__contentItemHeader {
+            font-size: toRem(45);
+        }
+
+        &__contentItemSubHeader {
+            font-size: toRem(18);
+        }
+    }
+}
+
+@media (min-width: $breakDesktop) {
+    .numbers {
+        height: toRem(250);
+
+        &__content {
+            gap: toRem(180);
+        }
+
+        &__contentItemHeader {
+            font-size: toRem(80);
+        }
+
+        &__contentItemSubHeader {
+            font-size: toRem(35);
+        }
+    }
+}

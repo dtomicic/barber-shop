@@ -201,6 +201,10 @@
             font-size: toRem(42);
         }
 
+        &RightDesktop {
+            gap: toRem(50);
+        }
+
         &RightDesktopItemLink {
             font-size: toRem(22);
         }
