@@ -1,0 +1,91 @@
+.card {
+    background: #E8E8E8;
+    border: 1px solid #D0D0D0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    padding-top: toRem(40);
+    max-width: toRem(225);
+
+    &__circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border-radius: 100%;
+        height: toRem(71);
+        width: toRem(71);
+        background-color: white;
+        border: 2px solid $accentColor;
+        position: relative;
+        bottom: toRem(75);
+        margin-bottom: toRem(-70);
+
+        &Image {
+            width: 50%;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        width: 85%;
+
+        &Header {
+            font-family: $headerFont;
+            font-size: toRem(16);
+            font-weight: 400;
+        }
+
+        &Divider {
+            height: toRem(3);
+            background-color: $accentColor;
+            width: 25%;
+            margin-top: toRem(3);
+        }
+
+        &Paragraph {
+            font-size: toRem(13);
+            font-family: $textFont;
+            color: rgba(0, 0, 0, 0.9);
+            font-weight: 500;
+            margin-top: toRem(14);
+            margin-bottom: toRem(20);
+        }
+    }
+}
+
+// Media queries 
+@media (min-width: $breakTablet) {
+    .card__contentHeader {
+        font-size: toRem(20);
+    }
+
+    .card__contentParagraph {
+        font-size: toRem(16);
+    }
+}
+
+@media (min-width: $breakDesktop) {
+    .card {
+        max-width: 350px;
+        width: 50%;
+
+        &__circle {
+            height: toRem(120);
+            width: toRem(120);
+            bottom: toRem(100);
+            margin-bottom: toRem(-90);
+        }
+    }
+    .card__contentHeader {
+        font-size: toRem(25);
+    }
+
+    .card__contentParagraph {
+        font-size: toRem(20);
+    }
+}
