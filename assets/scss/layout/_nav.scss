@@ -3,6 +3,8 @@
     flex-direction: column;
     position: fixed;
     width: 100%;
+    top: 0;
+    z-index: 9999;
 
     &__top {
         display: flex;
@@ -38,10 +40,11 @@
             background: rgba(67, 67, 67, 0.05);
             backdrop-filter: blur(1px);
             width: 40%;
-            transition: ease-in 0.2s;
-            opacity: 0;
+            transition: ease-in 0.3s;
+            left: -100%;
             position: absolute;
             top: 0;
+            z-index: 99999;
         }
 
         &Right {
@@ -57,6 +60,7 @@
             min-height: 100vh;
             right: -70%;
             top: 0;
+            z-index: 99999;
             transition: ease-in-out 0.5s;
 
             &Header {
@@ -209,7 +213,7 @@
 }
 
 .openLeft {
-    opacity: 1;
+    left: 0;
 }
 
 .disableScroll {
