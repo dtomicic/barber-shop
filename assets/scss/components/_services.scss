@@ -1,0 +1,118 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: toRem(50);
+        gap: toRem(46);
+        margin-bottom: toRem(50);
+        max-width: toRem(375);
+
+        &Item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: toRem(15);
+
+            &Circle {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: toRem(71);
+                width: toRem(71);
+                border: 2px solid $accentColor;
+                background-color: white;
+                border-radius: 100%;
+
+                &Image {
+                    width: 60%;
+                }
+            }
+
+            &Text {
+                text-align: left;
+                width: 45%;
+
+                &Header {
+                    font-family: $headerFont;
+                    font-size: toRem(16);
+                    font-weight: 500;
+                    margin-bottom: toRem(5);
+                }
+
+                &Paragraph {
+                    font-family: $textFont;
+                    font-size: toRem(12);
+                    font-weight: 600;
+                    color: rgba(0, 0, 0, 0.7);
+                }
+            }
+        }
+    }
+}
+
+// Media queries
+
+@media (min-width: $breakTablet) {
+    .services__content {
+        flex-direction: row;
+        max-width: unset;
+        flex-wrap: wrap;
+
+        &Item {
+            width: 47%;
+
+            &Circle {
+                height: toRem(86);
+                width: toRem(86);
+            }
+
+            &.accentedService {
+                flex-direction: row-reverse;
+            }
+
+            &Text {
+                max-width: toRem(234);
+
+                &.accentedText {
+                    text-align: right;
+                }
+
+                &Header {
+                    font-size: toRem(22);
+                }
+
+                &Paragraph {
+                    font-size: toRem(15);
+                    
+                }
+    
+            }
+        }
+    }
+}
+
+@media (min-width: $breakDesktop) {
+    .services__content {
+        margin-top: toRem(90);
+        padding: 0 toRem(100) 0 toRem(100);
+
+        &ItemCircle {
+            height: toRem(125);
+            width: toRem(125);
+        }
+
+        &ItemTextHeader {
+            font-size: toRem(28);
+        }
+
+        &ItemTextParagraph {
+            font-size: toRem(17);
+        }
+    }
+}
