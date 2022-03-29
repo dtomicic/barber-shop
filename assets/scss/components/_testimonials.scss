@@ -89,6 +89,12 @@
     }
 }
 @media (min-width: $breakDesktop) {
+    .testimonials {
+        padding-top: toRem(70);
+    }
+    .testimonials__main {
+        margin-bottom: toRem(100);
+    }
     .testimonials__mainParagraph {
         font-size: toRem(22);
         max-width: toRem(385);

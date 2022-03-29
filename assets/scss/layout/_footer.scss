@@ -1,0 +1,34 @@
+.footer {
+    background-color: $mainColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__socials {
+        display: flex;
+        gap: toRem(20);
+        margin-top: toRem(20);
+    }
+
+    &__copyright {
+        font-size: toRem(13);
+        font-family: $textFont;
+        color: white;
+        font-weight: 500;
+        margin-top: toRem(15);
+        margin-bottom: toRem(20);
+    }
+}
+
+// Media queries
+@media (min-width: $breakTablet) {
+    .footer__copyright {
+        font-size: toRem(15);
+    }
+}
+
+@media (min-width: $breakTablet) {
+    .footer__copyright {
+        font-size: toRem(22);
+    }
+}

@@ -4,7 +4,6 @@
     background-size: cover;
     background-position: 20%;
     margin-bottom: toRem(30);
-    height: toRem(110);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,7 +12,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: toRem(53);
+        padding-top: toRem(20);
+        gap: toRem(60);
+        margin-bottom: toRem(30);
 
         &Item {
             display: flex;
@@ -41,10 +42,11 @@
 @media (min-width: $breakTablet) {
     .numbers {
         margin-top: toRem(50);
-        height: toRem(130);
-        
+
         &__content {
             gap: toRem(100);
+            padding-top: toRem(30);
+            margin-bottom: toRem(40);
         }
 
         &__contentItemHeader {
@@ -59,10 +61,10 @@
 
 @media (min-width: $breakDesktop) {
     .numbers {
-        height: toRem(250);
-
         &__content {
             gap: toRem(180);
+            padding-top: toRem(80);
+            margin-bottom: toRem(65);
         }
 
         &__contentItemHeader {

@@ -110,6 +110,7 @@
                     display: flex;
                     align-items: center;
                     gap: toRem(16);
+                    transition: ease-in-out 0.4s;
 
                     &Item {
                         display: flex;
@@ -120,8 +121,18 @@
                         height: toRem(33);
                         width: toRem(33);
 
+                        &:hover {
+                            background-color: $accentColor;
+                            cursor: pointer;
+    
+                            .navigation__bottomRightMainSocialsItemIcon {
+                                fill: white; 
+                            }
+                        }
+
                         &Icon {
                             fill: $accentColor;
+                            transition: ease-in-out 0.4s;
 
                             &.twitter {
                                 width: toRem(20);
@@ -190,6 +201,12 @@
             }
         }
     }
+
+    .navigation__bottomRightMainSocialsItem {
+        height: toRem(40);
+        width: toRem(40);
+        margin-bottom: toRem(5);
+    }
 }
 
 @media (min-width: $breakDesktop) {
@@ -207,6 +224,28 @@
 
         &RightDesktopItemLink {
             font-size: toRem(22);
+        }
+    }
+
+    .navigation__bottomRightMainSocialsItem {
+        height: toRem(60);
+        width: toRem(60);
+
+        &Icon {
+            &.twitter {
+                width: toRem(25);
+                height: toRem(25);
+            }
+
+            &.facebook {
+                width: toRem(18);
+                height: toRem(26);
+            }
+
+            &.instagram {
+                width: toRem(23);
+                height: toRem(26);  
+            }
         }
     }
 }
