@@ -171,6 +171,8 @@ html {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
 }
 
 .navigation__bottomRightMainSocialsItem {
@@ -189,8 +191,19 @@ html {
   width: 2.0625rem;
 }
 
+.navigation__bottomRightMainSocialsItem:hover {
+  background-color: #B87333;
+  cursor: pointer;
+}
+
+.navigation__bottomRightMainSocialsItem:hover .navigation__bottomRightMainSocialsItemIcon {
+  fill: white;
+}
+
 .navigation__bottomRightMainSocialsItemIcon {
   fill: #B87333;
+  -webkit-transition: ease-in-out 0.4s;
+  transition: ease-in-out 0.4s;
 }
 
 .navigation__bottomRightMainSocialsItemIcon.twitter {
@@ -251,6 +264,11 @@ html {
   .navigation__topRightDesktopItem:hover .navigation__topRightDesktopItemLine {
     opacity: 1;
   }
+  .navigation__bottomRightMainSocialsItem {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-bottom: 0.3125rem;
+  }
 }
 
 @media (min-width: 1440px) {
@@ -266,6 +284,22 @@ html {
   }
   .navigation__topRightDesktopItemLink {
     font-size: 1.375rem;
+  }
+  .navigation__bottomRightMainSocialsItem {
+    height: 3.75rem;
+    width: 3.75rem;
+  }
+  .navigation__bottomRightMainSocialsItemIcon.twitter {
+    width: 1.5625rem;
+    height: 1.5625rem;
+  }
+  .navigation__bottomRightMainSocialsItemIcon.facebook {
+    width: 1.125rem;
+    height: 1.625rem;
+  }
+  .navigation__bottomRightMainSocialsItemIcon.instagram {
+    width: 1.4375rem;
+    height: 1.625rem;
   }
 }
 
@@ -684,7 +718,6 @@ html {
   background-size: cover;
   background-position: 20%;
   margin-bottom: 1.875rem;
-  height: 6.875rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -706,7 +739,9 @@ html {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 3.3125rem;
+  padding-top: 1.25rem;
+  gap: 3.75rem;
+  margin-bottom: 1.875rem;
 }
 
 .numbers__contentItem {
@@ -739,10 +774,11 @@ html {
 @media (min-width: 768px) {
   .numbers {
     margin-top: 3.125rem;
-    height: 8.125rem;
   }
   .numbers__content {
     gap: 6.25rem;
+    padding-top: 1.875rem;
+    margin-bottom: 2.5rem;
   }
   .numbers__contentItemHeader {
     font-size: 2.8125rem;
@@ -753,11 +789,10 @@ html {
 }
 
 @media (min-width: 1440px) {
-  .numbers {
-    height: 15.625rem;
-  }
   .numbers__content {
     gap: 11.25rem;
+    padding-top: 5rem;
+    margin-bottom: 4.0625rem;
   }
   .numbers__contentItemHeader {
     font-size: 5rem;
@@ -1207,6 +1242,12 @@ html {
 }
 
 @media (min-width: 1440px) {
+  .testimonials {
+    padding-top: 4.375rem;
+  }
+  .testimonials__main {
+    margin-bottom: 6.25rem;
+  }
   .testimonials__mainParagraph {
     font-size: 1.375rem;
     max-width: 24.0625rem;
@@ -1542,6 +1583,49 @@ html {
   }
   .hours__mainHoursItemText {
     font-size: 2.1875rem;
+  }
+}
+
+.footer {
+  background-color: #2C2C2C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.footer__copyright {
+  font-size: 0.8125rem;
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-weight: 500;
+  margin-top: 0.9375rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .footer__copyright {
+    font-size: 0.9375rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer__copyright {
+    font-size: 1.375rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
