@@ -1450,4 +1450,98 @@ html {
     font-size: 1.25rem;
   }
 }
+
+.hours {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/bg/hoursBG.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg/hoursBG.jpg");
+  background-blend-mode: darken;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.hours__main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.8125rem;
+}
+
+.hours__mainHeader {
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 1.5625rem;
+  color: #B87333;
+}
+
+.hours__mainHours {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  gap: 0.3125rem;
+  margin-top: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.hours__mainHoursItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hours__mainHoursItemText {
+  font-size: 0.75rem;
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .hours__mainHeader {
+    font-size: 2rem;
+  }
+  .hours__mainHoursItemText {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hours__mainHeader {
+    margin-top: 5rem;
+    font-size: 3.125rem;
+  }
+  .hours__mainHours {
+    margin-bottom: 7.5rem;
+  }
+  .hours__mainHoursItemText {
+    font-size: 2.1875rem;
+  }
+}
 /*# sourceMappingURL=main.css.map */
