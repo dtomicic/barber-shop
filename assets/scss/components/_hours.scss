@@ -1,0 +1,71 @@
+.hours {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/bg/hoursBG.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: toRem(13);
+
+        &Header {
+            font-family: $headerFont;
+            font-weight: 600;
+            font-size: toRem(25);
+            color: $accentColor;
+        }
+
+        &Hours {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: toRem(5);
+            margin-top: toRem(12);
+            margin-bottom: toRem(20);
+
+            &Item {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+
+                &Text {
+                    font-size: toRem(12);
+                    font-family: $textFont;
+                    color: white;
+                    font-weight: 500;
+
+                }
+            }
+        }
+    }
+}
+
+// Media queries
+@media (min-width: $breakTablet) {
+    .hours__mainHeader {
+        font-size: toRem(32);
+    }
+
+    .hours__mainHoursItemText {
+        font-size: toRem(16);
+    }
+}
+@media (min-width: $breakDesktop) {
+    .hours__mainHeader {
+        margin-top: toRem(80);
+        font-size: toRem(50);
+    }
+
+    .hours__mainHours {
+        margin-bottom: toRem(120);
+    }
+
+    .hours__mainHoursItemText {
+        font-size: toRem(35);
+    }
+}
