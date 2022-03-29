@@ -24,6 +24,12 @@
 
         &Image {
             width: 50%;
+
+            &.barberImage {
+                border-radius: 100%;
+                width: toRem(67);
+                height: toRem(67);
+            }
         }
     }
 
@@ -79,6 +85,12 @@
             width: toRem(120);
             bottom: toRem(100);
             margin-bottom: toRem(-90);
+
+            &Image.barberImage {
+                border-radius: 100%;
+                width: toRem(116);
+                height: toRem(116);
+            }
         }
     }
     .card__contentHeader {
@@ -89,3 +101,4 @@
         font-size: toRem(20);
     }
 }
+

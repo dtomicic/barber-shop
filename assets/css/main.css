@@ -601,6 +601,12 @@ html {
   width: 50%;
 }
 
+.card__circleImage.barberImage {
+  border-radius: 100%;
+  width: 4.1875rem;
+  height: 4.1875rem;
+}
+
 .card__content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -657,6 +663,11 @@ html {
     width: 7.5rem;
     bottom: 6.25rem;
     margin-bottom: -5.625rem;
+  }
+  .card__circleImage.barberImage {
+    border-radius: 100%;
+    width: 7.25rem;
+    height: 7.25rem;
   }
   .card__contentHeader {
     font-size: 1.5625rem;
@@ -1029,6 +1040,53 @@ html {
   }
   .appointment__mainFormInput {
     font-size: 1.375rem;
+  }
+}
+
+.barbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+.barbers__cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4.6875rem;
+  gap: 3.75rem;
+}
+
+@media (min-width: 768px) {
+  .barbers__cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 5.3125rem;
+    margin-bottom: 1.875rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
