@@ -1,0 +1,109 @@
+.testimonials {
+    margin-top: toRem(50);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../img/bg/testimonialsBG.jpg');
+    background-blend-mode: darken;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: toRem(45);
+        width: 80%;
+        margin-bottom: toRem(25);
+
+        &Paragraph {
+            text-align: center;
+            font-family: $textFont;
+            font-weight: 400;
+            color: white;
+            font-size: toRem(16);
+            max-width: toRem(300);
+        }
+
+        &Name {
+            text-align: center;
+            font-family: $headerFont;
+            font-weight: 600;
+            font-size: toRem(17);
+            color: white;
+            margin-top: toRem(10);
+        }
+
+        &Controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: toRem(20);
+
+
+            &Item {
+                display: flex;
+                justify-content: center;
+                border-radius: 100%;
+                height: toRem(30);
+                width: toRem(30);
+                border: 2px solid $accentColor;
+                margin-top: toRem(27);
+                transition: ease-in-out 0.5s;
+
+                &Icon {
+                    color: white;
+                    font-family: $headerFont;
+                    font-weight: 600;
+                    font-size: toRem(15);
+                }
+
+                &:hover {
+                    background-color: $accentColor;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+// Media queries 
+@media (min-width: $breakTablet) {
+    .testimonials__mainParagraph {
+        font-size: toRem(20);
+        max-width: toRem(368);
+    }
+
+    .testimonials__mainName {
+        font-size: toRem(22);
+    }
+
+    .testimonials__mainControlsItem {
+        height: toRem(45);
+        width: toRem(45);
+
+        &Icon {
+            font-size: toRem(25);
+        }
+    }
+}
+@media (min-width: $breakDesktop) {
+    .testimonials__mainParagraph {
+        font-size: toRem(22);
+        max-width: toRem(385);
+    }
+
+    .testimonials__mainName {
+        font-size: toRem(24);
+    }
+
+    .testimonials__mainControlsItem {
+        height: toRem(50);
+        width: toRem(50);
+
+        &Icon {
+            font-size: toRem(27);
+        }
+    }
+}
